@@ -11,17 +11,21 @@ client = texttospeech.TextToSpeechClient(
     client_options={"api_key": API_KEY, "quota_project_id": PROJECT_ID}
 )
 
-input_text = texttospeech.SynthesisInput(text="Testing google text to speech for the Derpies personal assistant project. Derp derp!")
+input_text = texttospeech.SynthesisInput(text="ArchID is like your super derpy ID card on Archway. It's how you prove you're part of the Derpies club and access all the cool stuff on chain, like exclusive perks and community events. Just like your derp passport to the cosmos!")
 
 # Note: the voice can also be specified by name.
 # Names of voices can be retrieved with client.list_voices().
 voice = texttospeech.VoiceSelectionParams(
-    # language_code="es-US",
-    # name="es-US-Studio-B",
+    language_code="es-US",
+    name="es-US-Studio-B",
     # language_code="en-AU",
     # name="en-AU-Standard-D",
-    language_code="en-IN",
-    name="en-IN-Standard-C",
+    # language_code="en-IN",
+    # name="en-IN-Standard-C",
+    # language_code="de-DE",
+    # name="de-DE-Standard-A",
+    # language_code="nl-NL",
+    # name="nl-NL-Standard-B",
 )
 
 audio_config = texttospeech.AudioConfig(
@@ -34,8 +38,8 @@ response = client.synthesize_speech(
 )
 
 # The response's audio_content is binary.
-with open("./output3.mp3", "wb") as out:
+with open("./test.mp3", "wb") as out:
     out.write(response.audio_content)
-    print('Audio content written to file "output.mp3"')
+    print('Audio content written to file')
 
 print('OK')
