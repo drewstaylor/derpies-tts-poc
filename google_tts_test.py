@@ -16,16 +16,16 @@ input_text = texttospeech.SynthesisInput(text="ArchID is like your super derpy I
 # Note: the voice can also be specified by name.
 # Names of voices can be retrieved with client.list_voices().
 voice = texttospeech.VoiceSelectionParams(
-    language_code="es-US",
-    name="es-US-Studio-B",
+    # language_code="es-US",
+    # name="es-US-Studio-B",
     # language_code="en-AU",
     # name="en-AU-Standard-D",
     # language_code="en-IN",
     # name="en-IN-Standard-C",
     # language_code="de-DE",
-    # name="de-DE-Standard-A",
-    # language_code="nl-NL",
-    # name="nl-NL-Standard-B",
+    # name="de-DE-Standard-E",
+    language_code="nl-NL",
+    name="nl-NL-Standard-B",
 )
 
 audio_config = texttospeech.AudioConfig(
